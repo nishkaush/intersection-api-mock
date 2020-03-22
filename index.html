@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="app">
+    <h1 id="main-header">I am a header</h1>
+    <div class="person-entries">
+      <h2 id="sticky-header" v-if="showStickyHeader">Sticky Header is active now</h2>
+      <p class="person-entry" :ref="person.email" v-for="person in people" :key="person.id">{{person.id}} -
+        {{person.email}}</p>
+    </div>
+    <h2 v-if="isLoading">Loading....</h2>
+    <div v-if="!isLoading && people.length" id="target-to-observe" style="height:80px;">No more left to show</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

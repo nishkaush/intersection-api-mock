@@ -1,0 +1,21 @@
+#app p {
+  padding: 100px;
+  background: royalblue;
+  color: white;
+}
+
+h2 {
+  box-shadow: 1px 1px 10px 10px #bebebe;
+  background: #939393;
+}
+
+.person-entries {
+  position: relative;
+}
+
+#sticky-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
